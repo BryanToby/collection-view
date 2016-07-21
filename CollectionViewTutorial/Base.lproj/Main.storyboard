@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="dyj-Py-Cma">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <scenes>
+        <!--Collection View Controller-->
+        <scene sceneID="Ir1-lm-aNi">
+            <objects>
+                <collectionViewController id="dyj-Py-Cma" customClass="CollectionViewController" customModule="CollectionViewTutorial" customModuleProvider="target" sceneMemberID="viewController">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="SgM-mh-ikL">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="rT9-rD-ici">
+                            <size key="itemSize" width="226" height="300"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        </collectionViewFlowLayout>
+                        <cells>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="cell" id="T6j-ob-s9a">
+                                <rect key="frame" x="0.0" y="0.0" width="226" height="300"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                    <rect key="frame" x="0.0" y="0.0" width="226" height="300"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" tag="1" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="URl-LJ-8OL">
+                                            <rect key="frame" x="0.0" y="0.0" width="226" height="231"/>
+                                        </imageView>
+                                        <visualEffectView opaque="NO" tag="1" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EuA-3c-Auj">
+                                            <rect key="frame" x="0.0" y="233" width="226" height="67"/>
+                                            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="XbN-3k-Ape">
+                                                <rect key="frame" x="0.0" y="0.0" width="226" height="67"/>
+                                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" tag="2" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ADE-hI-UXL">
+                                                        <rect key="frame" x="31" y="16" width="165" height="36"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                                <constraints>
+                                                    <constraint firstItem="ADE-hI-UXL" firstAttribute="centerX" secondItem="XbN-3k-Ape" secondAttribute="centerX" id="Zf5-ss-udx"/>
+                                                    <constraint firstItem="ADE-hI-UXL" firstAttribute="centerY" secondItem="XbN-3k-Ape" secondAttribute="centerY" id="f4n-GH-yLD"/>
+                                                    <constraint firstItem="ADE-hI-UXL" firstAttribute="top" secondItem="XbN-3k-Ape" secondAttribute="top" constant="16" id="kiA-GP-IDn"/>
+                                                    <constraint firstItem="ADE-hI-UXL" firstAttribute="leading" secondItem="XbN-3k-Ape" secondAttribute="leading" constant="31" id="rrH-PT-6cy"/>
+                                                </constraints>
+                                            </view>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="67" id="880-37-nS4"/>
+                                            </constraints>
+                                            <blurEffect style="light"/>
+                                        </visualEffectView>
+                                    </subviews>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                </view>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="URl-LJ-8OL" secondAttribute="trailing" id="735-8P-GPD"/>
+                                    <constraint firstItem="URl-LJ-8OL" firstAttribute="leading" secondItem="T6j-ob-s9a" secondAttribute="leading" id="Ic7-eH-TTy"/>
+                                    <constraint firstItem="EuA-3c-Auj" firstAttribute="top" secondItem="URl-LJ-8OL" secondAttribute="bottom" constant="2" id="Pri-wA-Ubb"/>
+                                    <constraint firstItem="URl-LJ-8OL" firstAttribute="trailing" secondItem="EuA-3c-Auj" secondAttribute="trailing" id="SYy-DZ-thR"/>
+                                    <constraint firstAttribute="bottom" secondItem="EuA-3c-Auj" secondAttribute="bottom" id="d0K-il-6yn"/>
+                                    <constraint firstItem="URl-LJ-8OL" firstAttribute="top" secondItem="T6j-ob-s9a" secondAttribute="top" id="fWG-pK-b4D"/>
+                                    <constraint firstItem="URl-LJ-8OL" firstAttribute="leading" secondItem="EuA-3c-Auj" secondAttribute="leading" id="tVy-7N-apq"/>
+                                </constraints>
+                            </collectionViewCell>
+                        </cells>
+                        <connections>
+                            <outlet property="dataSource" destination="dyj-Py-Cma" id="NLZ-gY-z2u"/>
+                            <outlet property="delegate" destination="dyj-Py-Cma" id="jy9-wf-Goo"/>
+                        </connections>
+                    </collectionView>
+                </collectionViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ynV-nC-lup" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="528" y="253"/>
+        </scene>
+    </scenes>
+</document>
